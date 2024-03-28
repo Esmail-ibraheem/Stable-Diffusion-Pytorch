@@ -6,7 +6,7 @@
 ---
 
 ## Citation
-```python
+```BibTex
 @misc{ho2020denoising,
     title   = {Denoising Diffusion Probabilistic Models},
     author  = {Jonathan Ho and Ajay Jain and Pieter Abbeel},
