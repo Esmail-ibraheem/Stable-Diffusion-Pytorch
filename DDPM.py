@@ -1,12 +1,12 @@
 import torch 
 import torch.nn as nn 
 from torch.nn import functional as F 
-import numpy as np 
+import numpy as np
 import math 
 
 class DenoisingDiffusionProbabilisticModelSampler:
     def __init__(self, generator: torch.Generator, number_training_steps = 1000, beta_start: float = 0.00085, beta_end: float = 0.0120) -> None:
-        self.betas = torch.linspace(beta_start ** 0.5, beta_end ** 0.5, number_training_steps, dtype= torch.float32) ** 2 
+        self.betas = torch.linspace(beta_start ** 0.5, beta_end ** 0.5, number_training_steps, dtype=torch.float32) ** 2 
         self.alphas = 1.0 - self.betas
         self.alphas_cumlativeproduct = torch.cumprod(self.alphas, d_model = 0)
         self.one = torch.tensor(1.0)
@@ -14,24 +14,24 @@ class DenoisingDiffusionProbabilisticModelSampler:
         self.number_training_timesteps = number_training_steps
         self.timesteps = torch.from_numpy(np.arange(0, number_training_steps)[::-1].copy())
     
-    def set_number_inference(self, number_inference_steps = 50):
-        self.numebr_inference_steps = number_inference_steps
-        ratio = self.number_training_timesteps // self.numebr_inference_steps
-        timesteps = (np.arange(0, self.numebr_inference_steps) * ratio).round()[::-1].copy().astype(np.int64)
-        self.timesteps = torch.from_numpy(timesteps)
+    def set_inference_steps(self, number_inference_steps = 50):
+        self.number_inference_steps = number_inference_steps
+        ratio = self.number_training_timesteps // self.number_inference_steps
+        timestep = (np.arange(0, self.number_inference_steps) * ratio).round()[::-1].copy().astype(np.int64)
+        self.timesteps = torch.from_numpy(timestep)
     
-    def _get_previous_steps(self, timestep: int) -> int:
-        previous_step = timestep - self.number_training_timesteps // self.numebr_inference_steps
-        return previous_step
+    def _get_previous_step(self, timestep: int) -> int:
+        previous_timestep = timestep - self.number_training_timesteps // self.number_inference_steps
+        return previous_timestep
     
-    def get_variance(self, timestep: int) -> torch.tensor:
-        previous_step_t = self._get_previous_steps(timestep)
+    def get_variance(self, timestep: int) -> torch.Tensor:
+        previous_step = self._get_previous_step(timestep)
         alpha_product_t = self.alphas_cumlativeproduct[timestep]
-        alpha_product_t_previous = self.alphas_cumlativeproduct[previous_step_t] if previous_step_t >=0 else self.one
+        alpha_product_t_previous = self.alphas_cumlativeproduct[previous_step] if previous_step >=0 else self.one
         current_beta_t = 1 - alpha_product_t / alpha_product_t_previous
         variance = (1 - alpha_product_t_previous) / (1 - alpha_product_t) * current_beta_t
-        variance = torch.clamp(variance, min=1e-20)
-        return variance
+        variance = torch.clamp(variance, 1e-20)
+        return variance 
     
     def set_strength(self, strength = 1):
         """
@@ -39,6 +39,29 @@ class DenoisingDiffusionProbabilisticModelSampler:
             More noise (strength ~ 1) means that the output will be further from the input image.
             Less noise (strength ~ 0) means that the output will be closer to the input image.
         """
-        startstep = self.numebr_inference_steps - int(self.numebr_inference_steps * strength)
-        self.timesteps = self.timesteps[startstep:]
+        startstep = self.number_inference_steps - int(self.number_inference_steps * strength)
+        self.timestep = self.timesteps[startstep:]
         self.startstep = startstep
+    
+    def step(self, timestep: int ,latents: torch.Tensor, model_output: torch.Tensor):
+        t = timestep
+        previous_step = self._get_previous_step(t)
+        alpha_product_t = self.alphas_cumlativeproduct[t]
+        alpha_product_t_previous = self.alphas_cumlativeproduct[previous_step] if previous_step >=0 else self.one
+        beta_product_t = 1 - alpha_product_t
+        beta_product_t_previous = 1 - alpha_product_t_previous
+        current_alpha_product = alpha_product_t / alpha_product_t_previous
+        current_beta_product = 1 - current_alpha_product
+        predict_original_sample = (latents - beta_product_t **(0.5) * model_output) / alpha_product_t
+        predict_original_sample_coeff = (alpha_product_t_previous **(0.5) * current_beta_product) / beta_product_t
+        current_sample_coeff = current_alpha_product **(0.5) * beta_product_t_previous / beta_product_t
+        predict_previous_sample = predict_original_sample_coeff * predict_original_sample + current_sample_coeff * latents
+        variance = 0
+        if t > 0:
+            device = model_output.device
+            noise = torch.randn(model_output.shape, generator=self.generator, device= device, dtype=model_output.dtype)
+            variance = (self._get_previous_step(t) ** 0.5) * noise 
+        predict_previous_sample = predict_previous_sample + variance
+
+        return predict_previous_sample
+    
