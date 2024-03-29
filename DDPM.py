@@ -1,7 +1,7 @@
 import torch 
 import torch.nn as nn 
 from torch.nn import functional as F 
-import numpy as np
+import numpy as np 
 import math 
  
 class DenoisingDiffusionProbabilisticModelSampler:
