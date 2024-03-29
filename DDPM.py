@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import functional as F 
 import numpy as np
 import math 
-
+ 
 class DenoisingDiffusionProbabilisticModelSampler:
     def __init__(self, generator: torch.Generator, number_training_steps = 1000, beta_start: float = 0.00085, beta_end: float = 0.0120) -> None:
         self.betas = torch.linspace(beta_start ** 0.5, beta_end ** 0.5, number_training_steps, dtype=torch.float32) ** 2 
