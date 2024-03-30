@@ -12,7 +12,6 @@ Denoising Diffusion Probabilistic Models (DDPM) are a class of generative models
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad
 q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) = \prod^T_{t=1} q(\mathbf{x}_t \vert \mathbf{x}_{t-1})
 ```
-![image](https://github.com/Esmail-ibraheem/DDPM/assets/113830751/720b733e-3fc3-4419-a36a-b7aa0cfbb400)
 
 ```python
 class GaussingDitribution:
