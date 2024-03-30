@@ -6,6 +6,7 @@
 ---
 ## Adding noise (Forward Process):
 
+```markdown
 ```latex
 $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad
