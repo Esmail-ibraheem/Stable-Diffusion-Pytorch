@@ -23,7 +23,7 @@ Denoising Diffusion Probabilistic Models (DDPM) are a class of generative models
 ---
 
 ## References
-(https://arxiv.org/abs/2006.11239)[original paper]: "Denoising Diffusion Probabilistic Models" by Jonathan Ho, Ajay Jain, and Pieter Abbeel.
+(https://arxiv.org/abs/2006.11239)[original_paper]: "Denoising Diffusion Probabilistic Models" by Jonathan Ho, Ajay Jain, and Pieter Abbeel.
 
 ---
 
