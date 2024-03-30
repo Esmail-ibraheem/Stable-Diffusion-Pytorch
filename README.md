@@ -1,16 +1,29 @@
 # DDPM 🎨
 "Denoising Diffusion Probabilistic Models" paper implementation. 
 
+---
 
+## Overview
+Denoising Diffusion Probabilistic Models (DDPM) are a class of generative models that learn a diffusion process to generate samples. The model iteratively applies a diffusion process to noise, gradually transforming it into samples from the target distribution. This approach has shown promising results in generating high-quality images and has garnered attention in the field of generative modeling.
 
 ---
-## Adding noise (Forward Process):
 
+## Citation
+```BibTex
+@misc{ho2020denoising,
+    title   = {Denoising Diffusion Probabilistic Models},
+    author  = {Jonathan Ho and Ajay Jain and Pieter Abbeel},
+    year    = {2020},
+    eprint  = {2006.11239},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.LG}
+}
+```
 
+---
 
+## References
+(original paper)[https://arxiv.org/abs/2006.11239]: "Denoising Diffusion Probabilistic Models" by Jonathan Ho, Ajay Jain, and Pieter Abbeel.
 
-```latex
-$$
-q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \\
-q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) = \prod_{t=1}^T q(\mathbf{x}_t \vert \mathbf{x}_{t-1})
-$$
+---
+
