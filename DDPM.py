@@ -79,7 +79,7 @@ class DenoisingDiffusionProbabilisticModelSampler:
     
     def add_noise(self, 
                  original_samples: torch.FloatTensor, 
-                 timestep: torch.IntTensor):
+                 timestep: torch.IntTensor) torch.FloatTensor:
 
         alphas_cumlative_product = self.alphas_cumlative_product.to(device = original_samples.device, dtype = original_samples.dtype)
         timestep = timestep.to(original_samples.device)
