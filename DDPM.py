@@ -1,6 +1,6 @@
 import torch 
 import numpy as np  
-
+ 
 class GaussingDistribution:   
     def __init__(self, parameters: torch.Tensor) -> None: 
         self.mean, log_variance = torch.chunk(parameters, 2, dim=1)
