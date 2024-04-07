@@ -1,5 +1,5 @@
 import torch 
-import numpy as np 
+import numpy as np  
 
 class GaussingDistribution:
     def __init__(self, parameters: torch.Tensor) -> None:
