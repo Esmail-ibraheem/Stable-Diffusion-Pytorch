@@ -10,7 +10,7 @@ class GaussingDistribution:
     def sample(self):
         return self.mean + self.std * torch.rand_like(self.std)
 
-class DDPMSampler:
+class DenoisingDiffusionProbabilisticModelSampler:
     def __init__(self, 
                  generator: torch.Generator, 
                  number_training_steps = 1000, 
