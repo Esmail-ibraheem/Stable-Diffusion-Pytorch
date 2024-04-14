@@ -8,7 +8,7 @@ class GaussingDistribution:
         self.std = torch.exp(0.5 * self.log_variance)
     
     def sample(self):
-        return self.mean + self.std * torch.rand_like(self.std)
+        return self.mean + self.std * torch.rand_like(self.std) 
 
 class DenoisingDiffusionProbabilisticModelSampler:
     def __init__(self, 
