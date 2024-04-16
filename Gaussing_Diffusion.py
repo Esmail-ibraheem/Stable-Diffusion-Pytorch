@@ -7,7 +7,7 @@ class GaussingDistribution:
     def __init__(self, parameters: torch.Tensor) -> None:
         self.mean, log_variance = torch.chunk(parameters, 2, dim=1) 
         self.log_variance = torch.clamp(log_variance, -30.0, 20.0)
-        self.std = torch.exp(0.5 * self.log_variance)
+        self.std = torch.exp(0.5 * self.log_variance) 
     
     def sample(self):
         return self.mean + self.std * torch.rand_like(self.std)
