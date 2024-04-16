@@ -1,6 +1,6 @@
 import torch
 import math
-import numpy as np
+import numpy as np 
 import enum
 
 class GaussingDistribution:
