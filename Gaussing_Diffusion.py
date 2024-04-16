@@ -3,7 +3,7 @@ import math
 import numpy as np 
 import enum
   
-class GaussingDistribution:
+class GaussingDistribution: 
     def __init__(self, parameters: torch.Tensor) -> None:
         self.mean, log_variance = torch.chunk(parameters, 2, dim=1) 
         self.log_variance = torch.clamp(log_variance, -30.0, 20.0)
