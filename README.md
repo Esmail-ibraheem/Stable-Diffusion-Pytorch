@@ -1,4 +1,5 @@
-# DDPM 🎨
+<h1 align="center">DDPM 🎨</h1>
+
 ![image](https://github.com/Esmail-ibraheem/DDPM/assets/113830751/55ba9e44-5096-4531-9629-061208177653)
 
 🎨"Denoising Diffusion Probabilistic Models" paper implementation. 
