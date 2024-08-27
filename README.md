@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Dali-DDPM/blob/main/Dali.jpg" alt="Your Image Description" width="300" height=300">
+</p>
+
+
 ## Results:
 
 ![output](https://github.com/user-attachments/assets/83f8d84f-754c-49cb-ab33-73eaa66805d3)
