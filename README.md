@@ -44,7 +44,7 @@ diffusion models consists of two processes as shown in the image below:
 them, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution.**
 
 ---
-```
+```BibTex
 @misc{ho2020denoising,
     title   = {Denoising Diffusion Probabilistic Models},
     author  = {Jonathan Ho and Ajay Jain and Pieter Abbeel},
