@@ -1,3 +1,4 @@
+# Dali/DDPM
 <p align="center">
   <img src="https://github.com/Esmail-ibraheem/Dali-DDPM/blob/main/Dali.jpg" alt="Your Image Description" width="300" height=300">
 </p>
