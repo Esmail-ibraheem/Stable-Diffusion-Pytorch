@@ -30,7 +30,7 @@
 them, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution.**
 
 ---
-```Bash
+```
 @misc{ho2020denoising,
     title   = {Denoising Diffusion Probabilistic Models},
     author  = {Jonathan Ho and Ajay Jain and Pieter Abbeel},
