@@ -1,4 +1,4 @@
-<h1 align="center">DDPM 🎨</h1>
+<h1 align="center">Dali/DDPM 🎨</h1>
 
 <p align="center">
   <img src="https://github.com/Esmail-ibraheem/DDPM/blob/main/Dali.jpg" alt="Your Image Description" width="300" height=300">
