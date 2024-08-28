@@ -1,5 +1,11 @@
 # Dali/DDPM
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3d9a8ff5-be7d-4c28-ba42-ec89fe2aa031" alt="Image 1" width="400"/>
+  <img src="https://github.com/user-attachments/assets/41036af9-98cd-4476-9435-74d196c32c35" alt="Image 2" width="400"/>
+</p>
+
+
 ![Pasted image 20240816183120](https://github.com/user-attachments/assets/3d9a8ff5-be7d-4c28-ba42-ec89fe2aa031)
 
 ## Diffusion Models — Introduction
