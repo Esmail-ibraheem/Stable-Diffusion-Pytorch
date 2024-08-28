@@ -1,8 +1,6 @@
 # Dali/DDPM
-<p align="center">
-  <img src="https://github.com/Esmail-ibraheem/Dali-DDPM/blob/main/Dali.jpg" alt="Your Image Description" width="300" height=300">
-</p>
 
+![Pasted image 20240816183120](https://github.com/user-attachments/assets/3d9a8ff5-be7d-4c28-ba42-ec89fe2aa031)
 
 ## Diffusion Models — Introduction
 Diffusion Models are generative models, meaning that they are used to generate data similar to the data on which they are trained. Fundamentally, Diffusion Models work by destroying training data through the successive addition of Gaussian noise, and then learning to recover the data by reversing this noising process. After training, we can use the Diffusion Model to generate data by simply passing randomly sampled noise through the learned denoising process.
@@ -20,7 +18,7 @@ diffusion models consists of two processes as shown in the image below:
 ## Usage
 run this command `python sd_gradio.py`
 
-![Pasted image 20240816183120](https://github.com/user-attachments/assets/3d9a8ff5-be7d-4c28-ba42-ec89fe2aa031)
+
 
 ![Pasted image 20240818155133](https://github.com/user-attachments/assets/41036af9-98cd-4476-9435-74d196c32c35)
 
