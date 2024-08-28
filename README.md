@@ -28,6 +28,24 @@ run this command `python sd_gradio.py`
 
 ## Results:
 
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/83f8d84f-754c-49cb-ab33-73eaa66805d3" alt="output" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/90104a77-db5b-4031-b91d-d4d89b78b764" alt="d" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/24478566-b22e-41be-adcc-e77cd3d9dff9" alt="output_image" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/26c059b3-7437-41ab-8307-3a7e4a3793f2" alt="s" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/4cba0dfe-38c3-40c1-890d-f83559c49132" alt="test" width="200"/></td>
+  </tr>
+  <tr>
+    <td><b>Prompt:</b> A cat stretching on the floor, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution</td>
+    <td><b>Prompt:</b> A dog reading a book, wearing glasses, comfy hat, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution</td>
+    <td><b>Prompt:</b> A dog stretching on the floor wearing sunglasses, looking to the camera, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution</td>
+    <td><b>Prompt:</b> An astronaut on the moon, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution</td>
+    <td><b>Prompt:</b> A black dog sitting between a bush and a pair of green pants standing up with nobody inside them, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution</td>
+  </tr>
+</table>
+
+
 ![image](https://github.com/user-attachments/assets/9b09d01b-04bb-4964-beb7-6e7c310750b6)
 
 
