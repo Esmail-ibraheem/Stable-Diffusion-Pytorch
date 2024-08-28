@@ -17,6 +17,13 @@ diffusion models consists of two processes as shown in the image below:
 - Reverse process (with blue lines).
 
 
+## Usage
+run this command `python sd_gradio.py`
+
+![Pasted image 20240816183120](https://github.com/user-attachments/assets/3d9a8ff5-be7d-4c28-ba42-ec89fe2aa031)
+
+![Pasted image 20240818155133](https://github.com/user-attachments/assets/41036af9-98cd-4476-9435-74d196c32c35)
+
 ## Results:
 
 ![output](https://github.com/user-attachments/assets/83f8d84f-754c-49cb-ab33-73eaa66805d3)
