@@ -22,7 +22,12 @@ run this command `python sd_gradio.py`
 
 ![Pasted image 20240818155133](https://github.com/user-attachments/assets/41036af9-98cd-4476-9435-74d196c32c35)
 
+
+
 ## Results:
+
+![image](https://github.com/user-attachments/assets/9b09d01b-04bb-4964-beb7-6e7c310750b6)
+
 
 ![output](https://github.com/user-attachments/assets/83f8d84f-754c-49cb-ab33-73eaa66805d3)
 
