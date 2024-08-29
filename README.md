@@ -29,7 +29,7 @@ diffusion models consists of two processes as shown in the image below:
 
 
 > [!NOTE]
-> Download vocab.json and merges.txt from [huggingface/stable_diffusion.tokenizer](https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main/tokenizer) and save them in the data folder
+> Download vocab.json and merges.txt from [huggingface/stable_diffusion.tokenizer](https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main/tokenizer) and 
 > Download v1-5-pruned-emaonly.ckpt from [huggingface/stable_diffusion.checpoints](https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main) and save it in the data folder
 
 
