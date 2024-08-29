@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 from tqdm import tqdm
-from nanograd.models.stable_diffusion.ddpm import DDPMSampler
+import DDPMSampler
 
 WIDTH = 512
 HEIGHT = 512
