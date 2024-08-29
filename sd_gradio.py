@@ -3,7 +3,7 @@ from PIL import Image
 from pathlib import Path
 from transformers import CLIPTokenizer
 import torch
-from nanograd.models.stable_diffusion import model_loader, pipeline
+import model_loader, pipeline
 
 DEVICE = "cpu"
 ALLOW_CUDA = False
@@ -15,9 +15,9 @@ elif torch.backends.mps.is_available() and ALLOW_MPS:
     DEVICE = "mps"
 print(f"Using device: {DEVICE}")
 
-tokenizer_vocab_path = Path("C:\\Users\\Esmail\\Desktop\\nanograd\\nanograd\\models\\stable_diffusion\\sd_data\\tokenizer_vocab.json")
-tokenizer_merges_path = Path("C:\\Users\\Esmail\\Desktop\\nanograd\\nanograd\\models\\stable_diffusion\\sd_data\\tokenizer_merges.txt")
-model_file = Path("C:\\Users\\Esmail\\Desktop\\nanograd\\nanograd\\models\\stable_diffusion\\sd_data\\v1-5-pruned-emaonly.ckpt")
+tokenizer_vocab_path = Path("sd_data\\tokenizer_vocab.json")
+tokenizer_merges_path = Path("sd_data\\tokenizer_merges.txt")
+model_file = Path("sd_data\\v1-5-pruned-emaonly.ckpt")
 
 tokenizer = CLIPTokenizer(str(tokenizer_vocab_path), merges_file=str(tokenizer_merges_path))
 models = model_loader.preload_models_from_standard_weights(str(model_file), DEVICE)
