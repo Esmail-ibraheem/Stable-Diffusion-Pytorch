@@ -1,5 +1,5 @@
 # sd.py
-from nanograd.models.stable_diffusion import model_loader, pipeline
+import model_loader, pipeline
 from PIL import Image
 from pathlib import Path
 from transformers import CLIPTokenizer
