@@ -20,7 +20,10 @@ diffusion models consists of two processes as shown in the image below:
 ## Usage
 **you have two different ways to run with interface:**
 - using gradio: run this command `python sd_gradio.py`
-- using fastapi: 
+- using fastapi: enter the directory 'stable_diffusion_api', then run this command `uvicorn sd_api:app --reload` assuming that you already downloaded the checkpoints, and you are in the directory.
+
+  ![image](https://github.com/user-attachments/assets/bfc61af1-16ce-494e-83cf-70cedee11175)
+
 
 
 
