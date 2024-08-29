@@ -1,5 +1,5 @@
-from nanograd.models.stable_diffusion import model_loader
-from nanograd.models.stable_diffusion import pipeline
+import model_loader
+import pipeline
 
 from PIL import Image
 from pathlib import Path
