@@ -15,9 +15,9 @@ elif (torch.has_mps or torch.backends.mps.is_available()) and ALLOW_MPS:
     DEVICE = "mps"
 print(f"Using device: {DEVICE}")
 
-tokenizer = CLIPTokenizer("C:\\Users\\Esmail\\Desktop\\nanograd\\nanograd\\models\\stable_diffusion\\sd_data\\tokenizer_vocab.json", 
-                          merges_file="C:\\Users\\Esmail\\Desktop\\nanograd\\nanograd\\models\\stable_diffusion\\sd_data\\tokenizer_merges.txt")
-model_file = "C:\\Users\\Esmail\\Desktop\\nanograd\\nanograd\\models\\stable_diffusion\\sd_data\\v1-5-pruned-emaonly.ckpt"
+tokenizer = CLIPTokenizer("sd_data\\tokenizer_vocab.json", 
+                          merges_file="sd_data\\tokenizer_merges.txt")
+model_file = "sd_data\\v1-5-pruned-emaonly.ckpt"
 models = model_loader.preload_models_from_standard_weights(model_file, DEVICE)
 
 def generate_image(prompt, uncond_prompt="", input_image=None, strength=0.9, do_cfg=True, cfg_scale=8, 
