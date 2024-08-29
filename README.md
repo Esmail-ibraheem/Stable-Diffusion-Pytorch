@@ -18,7 +18,9 @@ diffusion models consists of two processes as shown in the image below:
 
 
 ## Usage
-run this command `python sd_gradio.py`
+**you have two different ways to run with interface:**
+- using gradio: run this command `python sd_gradio.py`
+- using fastapi: 
 
 
 
