@@ -22,8 +22,11 @@ diffusion models consists of two processes as shown in the image below:
 - using gradio: run this command `python sd_gradio.py`
   ![Pasted image 20240818155133](https://github.com/user-attachments/assets/41036af9-98cd-4476-9435-74d196c32c35)
 - using fastapi: enter the directory 'stable_diffusion_api', then run this command `uvicorn sd_api:app --reload` assuming that you already downloaded the checkpoints, and you are in the directory.
+in the fastapi option, you have like an engine, creating your project, select your hardware, and then you have the generate image page
 
-  ![image](https://github.com/user-attachments/assets/bfc61af1-16ce-494e-83cf-70cedee11175)
+![image](https://github.com/user-attachments/assets/cab2879c-6a16-4bce-af48-e8af7fa1673c)
+![image](https://github.com/user-attachments/assets/41a38b75-87fb-48ac-8d82-dedf4695d51c)
+
 
 
 
