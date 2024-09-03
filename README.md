@@ -26,7 +26,7 @@ in the fastapi option, you have like an engine, creating your project, select yo
 
 ![image](https://github.com/user-attachments/assets/cab2879c-6a16-4bce-af48-e8af7fa1673c)
 ![image](https://github.com/user-attachments/assets/41a38b75-87fb-48ac-8d82-dedf4695d51c)
-![image](https://github.com/user-attachments/assets/fdc43eb0-3fa5-42b6-bcdc-af612dbb20fa)
+
 
 
 
@@ -39,7 +39,7 @@ in the fastapi option, you have like an engine, creating your project, select yo
 
 
 
-
+![image](https://github.com/user-attachments/assets/fdc43eb0-3fa5-42b6-bcdc-af612dbb20fa)
 
 ## Results:
 
@@ -59,6 +59,7 @@ in the fastapi option, you have like an engine, creating your project, select yo
     <td><b>Prompt:</b> A black dog sitting between a bush and a pair of green pants standing up with nobody inside them, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution</td>
   </tr>
 </table>
+
 
 
 
